@@ -40,7 +40,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./
-        file: sendresults/Dockerfile
+        file: deploy1/Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/deploy1:latest
     - name: Build and push
@@ -48,7 +48,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./
-        file: sendresults2/Dockerfile
+        file: deploy2/Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/deploy2:latest
     - name: Build and push
@@ -56,6 +56,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: ./
-        file: sendresults3/Dockerfile
+        file: deploy3/Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/deploy3:latest
