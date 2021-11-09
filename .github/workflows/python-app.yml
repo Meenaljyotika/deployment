@@ -23,9 +23,9 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Build and Push Docker Images
       run: |
-           docker build . --file ./sendresults/Dockerfile -t deploy1-repo:latest
-           docker build . --file ./sendresults2/Dockerfile -t deploy2-repo:latest
-           docker build . --file ./sendresults3/Dockerfile -t deploy3-repo:latest
+           docker build . --file ./sendresults/Dockerfile -t deploy1:latest
+           docker build . --file ./sendresults2/Dockerfile -t deploy2:latest
+           docker build . --file ./sendresults3/Dockerfile -t deploy3:latest
        
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v1
